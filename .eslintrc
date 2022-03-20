@@ -1,0 +1,79 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "react-app",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "semi": "error",
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "indent": ["error", 2],
+    "react/react-in-jsx-scope": "off",
+    "max-len": [
+      "error", {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "import/named": "off",
+    "import/default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/namespace": "off",
+    "no-multi-spaces": "error",
+    "no-useless-escape": "warn",
+    "no-unused-vars": "warn",
+    "no-async-promise-executor": "off",
+    "react/prop-types": "off",
+    "react/jsx-tag-spacing": "error",
+    "react/jsx-boolean-value": "error",
+    "react/jsx-closing-bracket-location": [2, "line-aligned"],
+    "react/jsx-closing-tag-location": "error",
+    "react/jsx-curly-brace-presence": [2, "never"],
+    "react/jsx-curly-spacing": [2, "never"],
+    "react/jsx-equals-spacing": [2, "never"],
+    "react/jsx-wrap-multilines": [2,
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "parens-new-line"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "@typescript-eslint/indent": ["error", 2, {"ignoredNodes": ["TSTypeParameterInstantiation", "JSXElement *", "JSXElement"], "SwitchCase": 1}],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/camelcase": "off",
+    //반환되는 대상에 대한 return type 정의의 생략을 허용한다.
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    //function 에 대한 return type 정의의 생략을 허용한다.
+    "@typescript-eslint/explicit-function-return-type": "off",
+    //빈 literal type을 허용한다.
+    "@typescript-eslint/ban-types": "off",
+    // type annotation 뒤에 1 space가 있어야 한다.
+    "@typescript-eslint/type-annotation-spacing": "error",
+    // "|", "=", 같은 infix operator 전후로 1 space가 있어야 한다.
+    "@typescript-eslint/space-infix-ops": "error",
+    // keyword 뒤에는 1 space가 있어야 한다.
+    "@typescript-eslint/keyword-spacing": "error",
+    // member delimiter는 semicolon으로 권장한다.
+    "@typescript-eslint/member-delimiter-style": "error",
+    // statement 끝에는 semicolon을 강제한다.
+    "@typescript-eslint/semi": ["error", "always"],
+    // 타입으로만 사용되는 경우 "import" 대신 "import type" keyword 사용을 강제한다.
+    "@typescript-eslint/consistent-type-imports": ["error", {"prefer": "type-imports"}]
+  }
+}
