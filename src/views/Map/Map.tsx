@@ -27,7 +27,7 @@ const Map: FC<MapProps> = (props) => {
   return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <Title text="찾아오시는 길" />
-      <div id="map" style={{width: '100%', height: '400px'}} />
+      <div id="map" style={{width: '100%', height: '250px'}} />
       <Divider />
     </div>
   );

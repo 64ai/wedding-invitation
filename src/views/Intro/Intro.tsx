@@ -11,11 +11,6 @@ const Intro: FC<IntroProps> = (props) => {
 
   return (
     <div>
-      <img
-        src="/wedding-invitation/images/thumbnail.jpeg"
-        alt="dd"
-        width={100}
-      />
       <Title text="어서오세요." />
       <Divider />
     </div>
