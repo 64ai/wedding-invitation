@@ -1,4 +1,5 @@
 import {Divider, Title} from '../../components';
+import Carousel from './Carousel';
 
 import type {FC} from 'react';
 
@@ -12,9 +13,11 @@ const Gallery: FC<GalleryProps> = (props) => {
   return (
     <div>
       <Title text="갤러리" />
+      <Carousel />
       <Divider />
     </div>
   );
 };
 
 export default Gallery;
+
