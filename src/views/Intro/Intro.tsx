@@ -1,4 +1,4 @@
-import {Divider} from '../../components';
+import {Divider, Title} from '../../components';
 
 import type {FC} from 'react';
 
@@ -11,7 +11,7 @@ const Intro: FC<IntroProps> = (props) => {
 
   return (
     <div>
-      어서오세요.
+      <Title text="어서오세요." />
       <Divider />
     </div>
   );

@@ -1,4 +1,5 @@
 import type {FC} from 'react';
+import {Title} from '../../components';
 
 export type AccountProps = {
   value?: any;
@@ -6,7 +7,7 @@ export type AccountProps = {
 
 const Account: FC<AccountProps> = (props) => {
   return (
-    <div>Account</div>
+    <Title text="Account" />
   );
 };
 

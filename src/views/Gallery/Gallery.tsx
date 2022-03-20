@@ -1,4 +1,4 @@
-import {Divider} from '../../components';
+import {Divider, Title} from '../../components';
 
 import type {FC} from 'react';
 
@@ -11,7 +11,7 @@ const Gallery: FC<GalleryProps> = (props) => {
 
   return (
     <div>
-      갤러리
+      <Title text="갤러리" />
       <Divider />
     </div>
   );

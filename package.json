@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/navermaps": "^3.0.13",
     "eslint": "^8.9.0",
     "gh-pages": "^3.2.3"
   }
