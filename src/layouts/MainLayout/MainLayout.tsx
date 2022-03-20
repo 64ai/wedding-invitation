@@ -1,6 +1,6 @@
 import type {FC} from 'react';
 
-export type MainLayoutProps = {}
+export type MainLayoutProps = {};
 
 const MainLayout: FC<MainLayoutProps> = ({children}) => {
   return (

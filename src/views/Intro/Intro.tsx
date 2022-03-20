@@ -4,7 +4,7 @@ import type {FC} from 'react';
 
 export type IntroProps = {
   value?: any;
-}
+};
 
 const Intro: FC<IntroProps> = (props) => {
   const {value} = props;

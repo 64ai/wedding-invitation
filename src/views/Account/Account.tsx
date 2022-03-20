@@ -3,7 +3,7 @@ import {Title} from '../../components';
 
 export type AccountProps = {
   value?: any;
-}
+};
 
 const Account: FC<AccountProps> = (props) => {
   return (

@@ -4,7 +4,7 @@ import type {FC} from 'react';
 
 export type GalleryProps = {
   value?: any;
-}
+};
 
 const Gallery: FC<GalleryProps> = (props) => {
   const {value} = props;

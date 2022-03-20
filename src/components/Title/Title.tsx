@@ -4,7 +4,7 @@ import type {FC} from 'react';
 
 export type TitleProps = {
   text: string;
-}
+};
 
 const Title: FC<TitleProps> = (props) => {
   const {text} = props;
