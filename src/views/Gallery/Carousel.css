@@ -15,6 +15,15 @@
     color: black;
 }
 
+
 .slick-dots {
     position: unset;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    opacity: 0.25;
+}
+
+.slick-dots .slick-active button:hover:before {
+    opacity: 0.75;
 }
