@@ -11,11 +11,11 @@ const Gallery: FC<GalleryProps> = (props) => {
   const {value} = props;
 
   return (
-    <div>
+    <article>
       <Title text="갤러리" />
       <Carousel />
       <Divider />
-    </div>
+    </article>
   );
 };
 

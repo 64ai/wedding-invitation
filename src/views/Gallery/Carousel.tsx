@@ -2,7 +2,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.css';
-export default function SimpleSlider() {
+
+export default function Carousel() {
   const settings = {
     dots: true,
     infinite: true,
@@ -13,25 +14,30 @@ export default function SimpleSlider() {
 
   const images = [
     {
-      path: '/wedding-invitation/images/thumbnail.jpeg'
+      src: '/wedding-invitation/images/thumbnail.jpeg',
+      alt: 'wedding 사진', // TODO: alt 추가
     },
     {
-      path: '/wedding-invitation/images/1.jpeg'
+      src: '/wedding-invitation/images/1.jpeg',
+      alt: 'wedding 사진', // TODO: alt 추가
     },
     {
-      path: '/wedding-invitation/images/2.jpeg'
+      src: '/wedding-invitation/images/2.jpeg',
+      alt: 'wedding 사진', // TODO: alt 추가
     },
     {
-      path: '/wedding-invitation/images/3.jpeg'
+      src: '/wedding-invitation/images/3.jpeg',
+      alt: 'wedding 사진', // TODO: alt 추가
     }
   ];
 
   return (
     <Slider {...settings}>
-      {images.map(({path}) => (
-        <div key={path}>
+      {images.map(({src, alt}) => (
+        <div key={src}>
           <img
-            src={path}
+            src={src}
+            alt={alt}
             width="100%"
             height="100%"
           />
