@@ -17,6 +17,7 @@ const Story: FC<StoryProps> = (props) => {
   return (
     <Box sx={{
       height: window.innerHeight,
+      fontFamily: 'LEFERIPOINT-WHITEOBLIQUEA',
       boxSizing: 'border-box',
       backgroundColor: STYLE.COLOR.MAIN,
       color: STYLE.COLOR.WHITE,
