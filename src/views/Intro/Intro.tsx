@@ -19,17 +19,17 @@ const Intro: FC<IntroProps> = (props) => {
         <Typography
           variant="h3"
           sx={{
-            fontFamily: 'Abel',
+            fontFamily: 'Josefin Slab',
             color: STYLE.COLOR.MAIN,
             position: 'absolute',
             top: isLarger ? 70 : 50,
             fontSize: isLarger ? '30px' : '20px' 
           }}
         >
-          We&apos;re Getting Married!
+          We&apos;re Getting Married !
         </Typography>
         <Box>
-          <img src="/wedding-invitation/images/main.jpg" alt="main image" width="100%" />
+          <img src="/wedding-invitation/images/main.jpg" alt="main image" width="100%" height="100%" />
         </Box>
       </Box>
     </article>
