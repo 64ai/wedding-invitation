@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Box} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import {STYLE} from '../../static';
 
 export type StoryProps = {};
@@ -15,19 +15,26 @@ const Story: FC<StoryProps> = (props) => {
 앞으로도 서로 믿고 응원해주며
 더 멋진 미래를 함께 만들어 나가려 해요`;
   return (
-    <Box sx={{
-      height: window.innerHeight,
-      fontFamily: 'LEFERIPOINT-WHITEOBLIQUEA',
-      boxSizing: 'border-box',
-      backgroundColor: STYLE.COLOR.MAIN,
-      color: STYLE.COLOR.WHITE,
-      whiteSpace: 'pre-line',
-      padding: '300px 20px',
-      textAlign: 'center',
-      fontSize: 20,
-    }}
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        padding: '100px 20px',
+        backgroundColor: STYLE.COLOR.MAIN,
+        height: window.innerHeight,
+      }}
     >
-      {text}
+      <Typography sx={{
+        width: '100%',
+        fontFamily: 'LEFERIPOINT-WHITEOBLIQUEA, sans-serif; font-weight:400; font-style:normal;',
+        color: STYLE.COLOR.WHITE,
+        whiteSpace: 'pre-line',
+        textAlign: 'center',
+        fontSize: 20,
+      }}
+      >
+        {text}
+      </Typography>
     </Box>
   );
 };
