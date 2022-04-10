@@ -1,19 +1,27 @@
-import {Account, Gallery, Intro, Map} from './views/index';
+import {Account, Gallery, Header, Intro, Map} from './views';
 import {MainLayout} from './layouts';
+import {ThemeProvider, createTheme} from '@mui/material/styles';
+import {red} from '@mui/material/colors';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: red[500],
+    },
+  },
+});
 
 function App() {
   return (
-    <MainLayout>
-      <Intro />
-      <img 
-        src="/wedding-invitation/images/baemin.png"
-        alt="baemin"
-        width="100%"
-      />
-      <Gallery />
-      <Map />
-      <Account />
-    </MainLayout>
+    <ThemeProvider theme={theme}>
+      <MainLayout>
+        <Header />
+        <Intro />
+        <Gallery />
+        <Map />
+        <Account />
+      </MainLayout>
+    </ThemeProvider>
   );
 }
 
