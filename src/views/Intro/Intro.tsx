@@ -9,7 +9,12 @@ const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
 
   return (
     <article ref={ref}>
-      <Box position="relative" display="flex" justifyContent="center">
+      <Box
+        position="relative"
+        display="flex"
+        justifyContent="center"
+        minHeight={400}
+      >
         <Typography
           variant="h3"
           sx={{
