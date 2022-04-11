@@ -1,17 +1,14 @@
-import type {FC} from 'react';
+import {forwardRef} from 'react';
 import {Box, Typography, useMediaQuery} from '@mui/material';
 import {STYLE} from '../../static';
 
-export type IntroProps = {
-  value?: any;
-};
+export type IntroProps = {};
 
-const Intro: FC<IntroProps> = (props) => {
-  const {value} = props;
+const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
   const isLarger = useMediaQuery('(min-width:370px)');
 
   return (
-    <article>
+    <article ref={ref}>
       <Box position="relative" display="flex" justifyContent="center">
         <Typography
           variant="h3"
@@ -20,7 +17,7 @@ const Intro: FC<IntroProps> = (props) => {
             color: STYLE.COLOR.MAIN,
             position: 'absolute',
             top: isLarger ? 70 : 50,
-            fontSize: isLarger ? '30px' : '20px' 
+            fontSize: isLarger ? '30px' : '20px'
           }}
         >
           We&apos;re Getting Married !
@@ -31,6 +28,6 @@ const Intro: FC<IntroProps> = (props) => {
       </Box>
     </article>
   );
-};
+});
 
 export default Intro;

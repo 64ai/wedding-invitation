@@ -2,6 +2,8 @@ import {Account, Gallery, Header, Intro, Map, Story} from './views';
 import {MainLayout} from './layouts';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
+import {useRef} from 'react';
+import {useInView} from 'react-intersection-observer';
 
 const theme = createTheme({
   palette: {
@@ -11,12 +13,19 @@ const theme = createTheme({
   },
 });
 
-function App() {
+const App = ()=> {
+  const option = {
+    rootMargin: '-54px',
+    threshold: 0,
+  };
+  const [introRef, inView] = useInView(option);
+
+  console.log({inView});
   return (
     <ThemeProvider theme={theme}>
       <MainLayout>
         <Header />
-        <Intro />
+        <Intro ref={introRef} />
         <Story />
         <img
           src="/wedding-invitation/images/baemin.png"
@@ -29,6 +38,6 @@ function App() {
       </MainLayout>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

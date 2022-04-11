@@ -33,6 +33,7 @@
     "no-useless-escape": "warn",
     "no-unused-vars": "warn",
     "no-async-promise-executor": "off",
+    "react/display-name": "off",
     "react/prop-types": "off",
     "react/jsx-tag-spacing": "error",
     "react/jsx-boolean-value": "error",

@@ -59,7 +59,8 @@ const Header: FC<HeaderProps> = (props) => {
   }, []);
 
   return (
-    <Box 
+    <Box
+      id="global-header"
       sx={{
         ...commonStyles,
         ...styles[bgColor]

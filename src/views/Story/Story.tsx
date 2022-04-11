@@ -19,7 +19,7 @@ const Story: FC<StoryProps> = (props) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        padding: '100px 20px',
+        // padding: '100px 20px',
         backgroundColor: STYLE.COLOR.MAIN,
         height: window.innerHeight,
       }}
@@ -30,7 +30,7 @@ const Story: FC<StoryProps> = (props) => {
         color: STYLE.COLOR.WHITE,
         whiteSpace: 'pre-line',
         textAlign: 'center',
-        fontSize: 20,
+        fontSize: 15,
       }}
       >
         {text}
