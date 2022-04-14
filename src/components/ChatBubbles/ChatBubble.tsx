@@ -21,7 +21,7 @@ const ChatBubble: FC<ChatBubbleProps> = (props) => {
     return (
       <div style={{height: '100%'}}>
         <div style={{height: '100%', width: '100%'}}>
-          <FakeMap />
+          <Map />
         </div>
       </div>
     );

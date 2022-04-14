@@ -12,7 +12,7 @@ const Map: FC<MapProps> = (props) => {
       scaleControl: false,
       logoControl: false,
       mapDataControl: false,
-      zoomControl: true,
+      // zoomControl: true,
       minZoom: 10,
       maxZoom: 15,
     };
@@ -25,9 +25,18 @@ const Map: FC<MapProps> = (props) => {
   },[]);
 
   return (
-    <div style={{height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <div id="_map" style={{
+    <div 
+      style={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
         borderRadius: '15px',
+        overflow: 'hidden',
+        isolation: 'isolate',
+      }}
+    >
+      <div id="_map" style={{
         width: '100%',
         height: '100%',
       }}
