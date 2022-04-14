@@ -1,4 +1,4 @@
-import {Account, Gallery, Header, Intro, Map, Story, Warning} from './views';
+import {Account, Conversation, Gallery, Header, Intro, Story, Warning} from './views';
 import {MainLayout} from './layouts';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
@@ -11,7 +11,7 @@ const theme = createTheme({
   },
 });
 
-const App = ()=> {
+const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Warning />
@@ -19,13 +19,13 @@ const App = ()=> {
         <Header />
         <Intro />
         <Story />
+        <Conversation />
         <img
-          src="/wedding-invitation/images/baemin.png"
+          src="/wedding-invitation/images/confetti.jpeg"
           alt="baemin"
           width="100%"
         />
         <Gallery />
-        <Map />
         <Account />
       </MainLayout>
     </ThemeProvider>

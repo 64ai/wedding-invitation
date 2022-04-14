@@ -1,15 +1,13 @@
 import type {FC} from 'react';
 import {Box, Typography} from '@mui/material';
 import {STYLE} from '../../static';
+import {forwardRef} from 'react';
 
 export type StoryProps = {};
 
-const Story: FC<StoryProps> = (props) => {
-  const text0 = 'Seungnam'; 
+const Story = forwardRef<HTMLDivElement>((props, ref) => {
+  const text0 = 'Seungnam';
   const text01 = '&  Jonae';
-  const text1 = `꼬꼬마 개발자, 막내 작가로 만난 우리
-  `;
-
   const text2 = `꼬꼬마 개발자, 막내작가로 만난 우리
 
 힘든 취업난과 넘치는 야근 속에서도
@@ -21,6 +19,7 @@ const Story: FC<StoryProps> = (props) => {
 더 멋진 미래를 함께 만들어 나가려 해요`;
   return (
     <Box
+      ref={ref}
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -32,7 +31,6 @@ const Story: FC<StoryProps> = (props) => {
       }}
     >
       <Box
-        // paddingX={2}
         width="84%"
         boxSizing="border-box"
       >
@@ -73,7 +71,7 @@ const Story: FC<StoryProps> = (props) => {
           alt="풋풋한 승남이와 정혜"
         />
       </Box>
-      <Typography 
+      <Typography
         sx={{
           width: '100%',
           fontFamily: 'LEFERIPOINT-WHITEOBLIQUEA, sans-serif; font-weight:400; font-style:normal;',
@@ -88,6 +86,6 @@ const Story: FC<StoryProps> = (props) => {
       </Typography>
     </Box>
   );
-};
+});
 
 export default Story;

@@ -12,7 +12,7 @@
   "rules": {
     "semi": "error",
     "quotes": ["error", "single", { "avoidEscape": true }],
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "react/react-in-jsx-scope": "off",
     "max-len": [
       "error", {
@@ -55,7 +55,7 @@
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
-    "@typescript-eslint/indent": ["error", 2, {"ignoredNodes": ["TSTypeParameterInstantiation", "JSXElement *", "JSXElement"], "SwitchCase": 1}],
+//    "@typescript-eslint/indent": ["error", 2, {"ignoredNodes": ["TSTypeParameterInstantiation", "JSXElement *", "JSXElement"], "SwitchCase": 1}],
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/camelcase": "off",
     //반환되는 대상에 대한 return type 정의의 생략을 허용한다.
