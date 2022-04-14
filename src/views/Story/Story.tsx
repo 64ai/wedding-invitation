@@ -27,7 +27,7 @@ const Story = forwardRef<HTMLDivElement>((props, ref) => {
         justifyContent: 'center',
         paddingY: '60px',
         backgroundColor: STYLE.COLOR.MAIN,
-        minHeight: window.innerHeight,
+        minHeight: 800,
       }}
     >
       <Box

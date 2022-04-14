@@ -12,7 +12,7 @@ const Gallery: FC<GalleryProps> = (props) => {
 
   return (
     <article>
-      <Title text="갤러리" />
+      <Title text="Ta-da!" />
       <Carousel />
       <Divider />
     </article>

@@ -26,7 +26,7 @@ const App = () => {
           width="100%"
         />
         <Gallery />
-        <Account />
+        {/*<Account />*/}
       </MainLayout>
     </ThemeProvider>
   );

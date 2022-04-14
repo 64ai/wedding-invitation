@@ -8,11 +8,11 @@ const Map: FC<MapProps> = (props) => {
   useEffect(() => {
     const mapOptions = {
       center: new naver.maps.LatLng(35.1877130,129.2123966),
-      zoom: 12,
+      zoom: 13,
       scaleControl: false,
       logoControl: false,
       mapDataControl: false,
-      // zoomControl: true,
+      zoomControl: true,
       minZoom: 10,
       maxZoom: 15,
     };
@@ -27,8 +27,7 @@ const Map: FC<MapProps> = (props) => {
   return (
     <div style={{height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <div id="_map" style={{
-        borderTopLeftRadius: '15px',
-        borderTopRightRadius: '15px',
+        borderRadius: '15px',
         width: '100%',
         height: '100%',
       }}
