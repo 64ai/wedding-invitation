@@ -1,4 +1,4 @@
-import {Account, Conversation, Gallery, Header, Intro, Story, Warning} from './views';
+import {Account, Confetti, Conversation, Gallery, Header, Intro, Story, Warning} from './views';
 import {MainLayout} from './layouts';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
@@ -26,6 +26,7 @@ const App = () => {
           width="100%"
         />
         <Gallery />
+        <Confetti />
         {/*<Account />*/}
       </MainLayout>
     </ThemeProvider>

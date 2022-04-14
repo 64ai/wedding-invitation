@@ -1,4 +1,5 @@
 export {default as Account} from './Account';
+export {default as Confetti} from './Confetti';
 export {default as Conversation} from './Conversation';
 export {default as Gallery} from './Gallery';
 export {default as Header} from './Header';
