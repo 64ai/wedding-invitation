@@ -1,48 +1,55 @@
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './Carousel.css';
+import {Box} from '@mui/material';
+import {ImageCard} from '../../components';
+
+export interface ImageType {
+  src: string;
+  alt: string;
+  x: number;
+  y: number;
+}
 
 export default function Carousel() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
-
-  const images = [
+  const images: ImageType[] = [
     {
       src: '/wedding-invitation/images/thumbnail.jpeg',
-      alt: 'wedding 사진', // TODO: alt 추가
+      alt: 'wedding 사진', // TODO: alt 추가,
+      x: -120,
+      y: 10,
     },
     {
       src: '/wedding-invitation/images/1.jpeg',
-      alt: 'wedding 사진', // TODO: alt 추가
+      alt: 'wedding 사진', // TODO: alt 추가,
+      x: -180,
+      y: 0,
     },
     {
       src: '/wedding-invitation/images/2.jpeg',
       alt: 'wedding 사진', // TODO: alt 추가
+      x: -125,
+      y: 50,
     },
     {
       src: '/wedding-invitation/images/3.jpeg',
       alt: 'wedding 사진', // TODO: alt 추가
+      x: -170,
+      y: 10,
     }
   ];
 
   return (
-    <Slider {...settings}>
-      {images.map(({src, alt}) => (
-        <div key={src}>
-          <img
-            src={src}
-            alt={alt}
-            width="100%"
-            height="100%"
-          />
-        </div>
+    <Box
+      sx={{
+        display: 'flex',
+        maxHeight: '400px',
+        overflowX: 'scroll',
+      }}
+    >
+      {images.map((props) => (
+        <ImageCard
+          key={props.src}
+          {...props}
+        />
       ))}
-    </Slider>
+    </Box>
   );
 }

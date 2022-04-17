@@ -25,7 +25,7 @@ const Confetti: FC<ConfettiProps> = (props) => {
   };
 
   return (
-    <div style={{height: '100px'}}>
+    <div>
       <Particles
         id="tsparticles"
         init={particlesInit}

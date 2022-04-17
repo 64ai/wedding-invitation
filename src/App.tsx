@@ -1,7 +1,19 @@
-import {Account, Confetti, Conversation, Gallery, Header, Intro, Story, Warning} from './views';
+import {createContext} from 'react';
+import {
+  Account,
+  Confetti,
+  Conversation,
+  Gallery,
+  Header,
+  Intro,
+  Notice,
+  Story,
+  Warning,
+} from './views';
 import {MainLayout} from './layouts';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
+
 
 const theme = createTheme({
   palette: {
@@ -11,25 +23,31 @@ const theme = createTheme({
   },
 });
 
+// Theme context, default to light theme
+const GlobalContext = createContext('light');
+
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Warning />
-      <MainLayout>
-        <Header />
-        <Intro />
-        <Story />
-        <Conversation />
-        <img
-          src="/wedding-invitation/images/confetti.jpeg"
-          alt="baemin"
-          width="100%"
-        />
-        <Gallery />
-        <Confetti />
-        {/*<Account />*/}
-      </MainLayout>
-    </ThemeProvider>
+    <GlobalContext.Provider value="value">
+      <ThemeProvider theme={theme}>
+        <Warning />
+        <MainLayout>
+          <Header />
+          <Intro />
+          <Story />
+          <Conversation />
+          <img
+            src="/wedding-invitation/images/confetti.jpeg"
+            alt="baemin"
+            width="100%"
+          />
+          <Gallery />
+          <Notice />
+          {/*<Confetti />*/}
+          <Account />
+        </MainLayout>
+      </ThemeProvider>
+    </GlobalContext.Provider>
   );
 };
 
