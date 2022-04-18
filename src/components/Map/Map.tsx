@@ -35,6 +35,10 @@ const Map: FC<MapProps> = (props) => {
         overflow: 'hidden',
         isolation: 'isolate',
       }}
+      onClick={() => {
+        const s = window.confirm('네이버 지도로  이동하시겠습니까?');
+
+      }}
     >
       <div id="_map" style={{
         width: '100%',

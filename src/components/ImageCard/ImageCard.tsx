@@ -74,12 +74,12 @@ const ImageCard: FC<ImageCardProps> = (props) => {
     <Box
       sx={{
         paddingX: 1,
-        '&:first-of-type':{
-          paddingLeft: 0,
-        },
-        '&:last-of-type':{
-          paddingRight: 0,
-        }
+        // '&:first-of-type':{
+        //   paddingLeft: 0,
+        // },
+        // '&:last-of-type':{
+        //   paddingRight: 0,
+        // }
       }}
       position="relative"
     >

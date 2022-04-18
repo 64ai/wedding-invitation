@@ -13,6 +13,10 @@ import {
 import {MainLayout} from './layouts';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
+import {Box} from '@mui/material';
+import Notice3 from './views/Notice/Notice3';
+import Notice2 from './views/Notice/Notice2';
+import {Diagonal} from './components';
 
 
 const theme = createTheme({
@@ -36,13 +40,17 @@ const App = () => {
           <Intro />
           <Story />
           <Conversation />
-          <img
-            src="/wedding-invitation/images/confetti.jpeg"
-            alt="baemin"
-            width="100%"
-          />
+          <Box sx={{userSelect: 'none'}}>
+            <img
+              src="/wedding-invitation/images/confetti.jpeg"
+              alt="baemin"
+              width="100%"
+            />
+          </Box>
           <Gallery />
           <Notice />
+          <Notice2 />
+          <Notice3 />
           {/*<Confetti />*/}
           <Account />
         </MainLayout>

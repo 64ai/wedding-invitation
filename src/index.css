@@ -15,6 +15,12 @@
 }
 
 /* 써라운드에어 */
+@font-face {
+  font-family: 'Cafe24SsurroundAir';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
   font-family: 'LEFERIPOINT-WHITEOBLIQUEA', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -25,6 +31,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  user-focus: none;
+  user-focus-pointer: none;
+  user-select: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

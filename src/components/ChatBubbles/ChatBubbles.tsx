@@ -14,18 +14,11 @@ const ChatBubbles: FC<ChatBubblesProps> = (props) => {
     <Box className="chat">
       {bubbles.map((bubble, index) => {
         return (
-          <Box
+          <ChatBubble
+            index={index}
             key={bubble.id}
-            className={clsx({
-              message: true,
-              yours: !bubble.mine,
-              mine: bubble.mine,
-              last: bubble.last,
-              map: bubble.type === 'map',
-            })}
-          >
-            <ChatBubble data={bubble} />
-          </Box>
+            data={bubble}
+          />
         );
       })}
     </Box>
