@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import bubbles from './chatData';
 import ChatBubble from './ChatBubble';
 import {Box} from '@mui/material';

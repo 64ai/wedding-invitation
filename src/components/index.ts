@@ -1,4 +1,6 @@
+export {Accordion} from './Accordion';
 export {ChatBubbles} from './ChatBubbles';
+export {Confetti} from './Confetti';
 export {Diagonal} from './Diagonal';
 export {Divider} from './Divider';
 export {ImageCard} from './ImageCard';

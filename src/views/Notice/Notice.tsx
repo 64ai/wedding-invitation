@@ -31,7 +31,7 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingY: '60px',
+        paddingTop: '60px',
         backgroundColor: '#ef7f97',
         marginTop: 10,
         minHeight: 400,
@@ -111,6 +111,8 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
           wordBreak: 'keep-all',
           textAlign: 'center',
           fontSize: 140,
+          zIndex: 2,
+          lineHeight: 1,
         }}
       >
         🍸

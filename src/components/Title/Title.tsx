@@ -6,13 +6,19 @@ import type {FC} from 'react';
 export type TitleProps = {
   className?: string;
   text: string;
+  style?: any;
 };
 
 const Title: FC<TitleProps> = (props) => {
-  const {className,text} = props;
+  const {className, text, style = {}} = props;
 
   return (
-    <h2 className={clsx('title', className)}>{text}</h2>
+    <h2
+      className={clsx('title', className)}
+      style={style}
+    >
+      {text}
+    </h2>
   );
 };
 

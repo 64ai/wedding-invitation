@@ -17,8 +17,8 @@ const ChatBubble: FC<ChatBubbleProps> = (props) => {
   const {ref, inView} = useInView({
     triggerOnce: true,
     threshold: 1.0,
-    rootMargin: `-${index * 10 + 5}px`,
-    delay: 300,
+    rootMargin: `-${index * 9 + 5}px`,
+    delay: 300 * (index + 1),
   });
   const {type} = data;
 

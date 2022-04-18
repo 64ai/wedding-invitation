@@ -1,8 +1,7 @@
-import {Divider, Title} from '../../components';
+import {Title} from '../../components';
 import Carousel from './Carousel';
 
 import type {FC} from 'react';
-import Heart from '../../components/ImageCard/Heart';
 
 export type GalleryProps = {
   value?: any;
@@ -13,9 +12,8 @@ const Gallery: FC<GalleryProps> = (props) => {
 
   return (
     <article style={{position: 'relative'}}>
-      <Title text="Ta-da!" />
+      <Title text="Ta-da!" style={{fontSize: 56, color: '#2C2C2C', marginBottom: 20}} />
       <Carousel />
-      {/*<Divider />*/}
     </article>
   );
 };

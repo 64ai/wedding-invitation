@@ -1,11 +1,11 @@
 import {forwardRef} from 'react';
-import {Box, Button, Link, Typography, useMediaQuery} from '@mui/material';
+import {Box, Button, Typography} from '@mui/material';
 import {STYLE} from '../../static';
+import {Accordion} from '../../components';
 
 export type NoticeProps = {};
 
 const Notice = forwardRef<HTMLDivElement>((props, ref) => {
-  // TODO: https://fonts.google.com/specimen/Montserrat+Subrayada?preview.text=NOTICE&preview.text_type=custom
   const text2 = `결혼식이 진행되는 곳이 
 웨딩홀이 아닌 관계로
 공간이 협소하여 
@@ -19,12 +19,12 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingY: '60px',
-        backgroundColor: '#f9dd53',
-        color: '#5b5757'
+        paddingTop: '96px',
+        paddingBottom: '60px',
+        backgroundColor: STYLE.COLOR.MAIN,
+        color:  STYLE.COLOR.WHITE,
       }}
     >
-
       <Typography
         sx={{
           width: '100%',
@@ -58,9 +58,35 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
           variant="contained"
           target="_blank"
           href="https://forms.gle/mU7i9aLmGdsrC8gk6"
+          sx={{
+            backgroundColor: STYLE.COLOR.WHITE,
+            color:  STYLE.COLOR.MAIN,
+            '&:hover': {
+              opacity: 0.9,
+              backgroundColor: STYLE.COLOR.WHITE,
+              color:  STYLE.COLOR.MAIN,
+            },
+            '@keyframes wiggle': {
+              'from': {
+                transform: 'rotate(3deg)'
+              },
+              'to': {
+                transform: 'rotate(-3deg)'
+              }
+            },
+            animation: 'wiggle 1s ease-in-out alternate infinite'
+          }}
         >
           Google FORM
         </Button>
+      </Box>
+      <Box marginTop={10} textAlign="center" width="65%">
+        {/*<Typography variant="h2" gutterBottom>👫 </Typography>*/}
+        <Box display="flex" justifyContent="center">
+          <Accordion />
+        </Box>
+        {/*<div style={{textAlign: 'center'}}>황정혜 국민은행 115302-04-107751</div>*/}
+        {/*<div style={{textAlign: 'center'}}>노승남 토스뱅크 1000-0034-9315</div>*/}
       </Box>
     </Box>
   );

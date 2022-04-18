@@ -1,7 +1,6 @@
-import {createContext} from 'react';
+import {createContext, useRef} from 'react';
 import {
   Account,
-  Confetti,
   Conversation,
   Gallery,
   Header,
@@ -16,8 +15,7 @@ import {red} from '@mui/material/colors';
 import {Box} from '@mui/material';
 import Notice3 from './views/Notice/Notice3';
 import Notice2 from './views/Notice/Notice2';
-import {Diagonal} from './components';
-
+import {Confetti} from './components';
 
 const theme = createTheme({
   palette: {
@@ -31,6 +29,7 @@ const theme = createTheme({
 const GlobalContext = createContext('light');
 
 const App = () => {
+  const ref = useRef<any>(null);
   return (
     <GlobalContext.Provider value="value">
       <ThemeProvider theme={theme}>
@@ -51,8 +50,7 @@ const App = () => {
           <Notice />
           <Notice2 />
           <Notice3 />
-          {/*<Confetti />*/}
-          <Account />
+          {/*<Account />*/}
         </MainLayout>
       </ThemeProvider>
     </GlobalContext.Provider>

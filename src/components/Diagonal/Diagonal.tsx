@@ -16,9 +16,10 @@ const Diagonal: FC<DiagonalProps> = (props) => {
       <Box
         sx={{
           width: '100%',
-          height: '46px',
+          position: 'absolute',
+          height,
           backgroundColor,
-          transform: `translateY(${translateY}px) skewY(4deg)`,
+          transform: `translateY(${translateY}px) skewY(5deg)`,
         }}
       />
     </>
