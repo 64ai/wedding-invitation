@@ -80,13 +80,13 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
           Google FORM
         </Button>
       </Box>
-      <Box marginTop={10} textAlign="center" width="65%">
-        {/*<Typography variant="h2" gutterBottom>👫 </Typography>*/}
-        <Box display="flex" justifyContent="center">
-          <Accordion />
-        </Box>
-        {/*<div style={{textAlign: 'center'}}>황정혜 국민은행 115302-04-107751</div>*/}
-        {/*<div style={{textAlign: 'center'}}>노승남 토스뱅크 1000-0034-9315</div>*/}
+      <Box marginTop={10} textAlign="center" width="80%">
+        <Typography variant="h2" gutterBottom>👫 </Typography>
+        {/*<Box display="flex" justifyContent="center">*/}
+        {/*  <Accordion />*/}
+        {/*</Box>*/}
+        <div style={{textAlign: 'center'}}>황정혜 / 국민은행 115302-04-107751</div>
+        <div style={{textAlign: 'center'}}>노승남 / 토스뱅크 1000-0034-9315</div>
       </Box>
     </Box>
   );
