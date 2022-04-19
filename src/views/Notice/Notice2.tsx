@@ -1,10 +1,8 @@
-import {useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {Box, Button, Slide, Typography} from '@mui/material';
 import {useInView} from 'react-intersection-observer';
 import {STYLE} from '../../static';
 import {Confetti, Diagonal} from '../../components';
-
-export type NoticeProps = {};
 
 const Notice = () => {
   const ref = useRef();
@@ -15,10 +13,11 @@ const Notice = () => {
     });
   const {ref: noteRef, inView: noteInView} = useInView(
     {
-      threshold: 0.9,
-      delay: 2800,
+      threshold: 1.0,
       triggerOnce: true,
     });
+
+  const [showNote, setShowNote] = useState<boolean>(false);
 
   const text1 = 'SEE YOU SOON!';
   const text2 = 'NOTICE';
@@ -27,6 +26,15 @@ const Notice = () => {
 밑에 버튼을 눌러 
 참석 유무를 알려주세요!
 ↓`;
+
+  useEffect(() => {
+    if (noteInView) {
+      setTimeout(() => {
+        setShowNote(true);
+      }, 1000);
+    }
+  }, [noteInView]);
+
   return (
     <Box
       ref={ref}
@@ -75,17 +83,17 @@ const Notice = () => {
         {inView && <Confetti container={ref.current} />}
       </div>
       <Box width="100%" ref={noteRef} sx={{position: 'absolute', bottom: 0}}>
-        <Slide direction="right" in={noteInView} timeout={2000}>
+        <Slide direction="right" in={showNote} timeout={2000}>
           <Box>
             <img
               src="/wedding-invitation/images/sticky_note.png"
               width="390"
-              style={{transform: 'translate(-33px, 7px)'}}
+              style={{transform: 'translate(-60px, 35px)'}}
             />
             <Box sx={{
               position: 'absolute',
-              top: 68,
-              left: 156,
+              top: 93,
+              left: 128,
               transform: 'rotate(-13.3deg)',
               textAlign: 'center',
             }}

@@ -1,8 +1,9 @@
-import type {FC} from 'react';
+import {useEffect, useState} from 'react';
 import {Box, Typography} from '@mui/material';
 import {STYLE} from '../../static';
-import {useEffect, useState} from 'react';
 import {AccessTime as AccessTimeIcon, FmdGood as FmdGoodIcon} from '@mui/icons-material';
+
+import type {FC} from 'react';
 
 export type HeaderProps = {
   value?: any;
@@ -38,7 +39,6 @@ const TypographyStyle = {
 };
 
 const Header: FC<HeaderProps> = (props) => {
-  const {value} = props;
   const [bgColor, setBgColor] = useState<keyof typeof styles>('white');
 
   // TODO: change to intersection observer

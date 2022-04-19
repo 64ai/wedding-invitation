@@ -1,8 +1,6 @@
 import {forwardRef} from 'react';
-import {Box, Button, Link, Typography, useMediaQuery} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import {STYLE} from '../../static';
-
-export type NoticeProps = {};
 
 const Notice = forwardRef<HTMLDivElement>((props, ref) => {
   // TODO: https://fonts.google.com/specimen/Syncopate?preview.text=see%20you%20soon!&preview.text_type=custom
@@ -39,7 +37,6 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
     >
       <Box sx={{
         content: '""',
-        // position: 'absolute',
         bottom: '-5px',
         display: 'block',
         width: '138px',

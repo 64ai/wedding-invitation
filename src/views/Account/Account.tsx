@@ -12,16 +12,16 @@ export type AccountProps = {
 const Account: FC<AccountProps> = (props) => {
   return (
     <Box
-      // component="article"
       sx={{
-        paddingBottom: 5,
+        paddingY: 7 ,
         textAlign: 'center',
-        backgroundColor: STYLE.COLOR.MAIN,
-        color:  STYLE.COLOR.WHITE,
+        backgroundColor: '#e5d2e0',
+        color: 'rgba(0,0,0, 0.7)',
         border: 'none',
+        fontSize: 13,
       }}
     >
-      <Typography variant="h2" gutterBottom>🕊</Typography>
+      {/*<Typography variant="h2" gutterBottom>🕊</Typography>*/}
       <div style={{textAlign: 'center'}}>황정혜 국민은행 115302-04-107751</div>
       <div style={{textAlign: 'center'}}>노승남 토스뱅크 1000-0034-9315</div>
     </Box>

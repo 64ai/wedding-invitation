@@ -1,6 +1,5 @@
 import type {Bubbles} from './types';
 
-
 const BubbleData: Bubbles = [
   {
     id: 1,
