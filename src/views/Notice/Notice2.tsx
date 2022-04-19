@@ -84,7 +84,7 @@ const Notice = () => {
       </div>
       <Box width="100%" ref={noteRef} sx={{position: 'absolute', bottom: 0}}>
         <Slide direction="right" in={showNote} timeout={2000}>
-          <Box>
+          <Box overflow="hidden">
             <img
               src="/wedding-invitation/images/sticky_note.png"
               alt="sticky note"
