@@ -9,14 +9,14 @@ const BubbleData: Bubbles = [
     content: '승남이랑 정혜 결혼한다며!'
   },
   {
-    id: 1,
+    id: 2,
     mine: false,
     last: true,
     type: 'text',
     content: '어디서 결혼한대?'
   },
   {
-    id: 2,
+    id: 3,
     mine: true,
     last: false,
     type: 'map',
@@ -25,33 +25,26 @@ const BubbleData: Bubbles = [
     }
   },
   {
-    id: 3,
+    id: 4,
     mine: true,
     last: true,
     type: 'text',
     content: '여기!!!'
   },
   {
-    id: 4,
+    id: 5,
     mine: false,
     last: false,
     type: 'text',
     content: '오 기장에서 하는구나'
   },
   {
-    id: 5,
+    id: 6,
     mine: false,
     last: true,
     type: 'text',
     content: '근데 걔네 웨딩 사진은 찍었대?'
   },
-  // {
-  //   id: 6,
-  //   mine: true,
-  //   last: false,
-  //   type: 'text',
-  //   content: '당연하지 ㅋㅋ'
-  // },
   {
     id: 7,
     mine: true,

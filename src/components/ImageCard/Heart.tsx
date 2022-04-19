@@ -1,17 +1,12 @@
-import reactDom from 'react-dom';
 import type {FC} from 'react';
 
-import {
-  FavoriteBorderOutlined as FavoriteBorderOutlinedIcon,
-  FavoriteOutlined as FavoriteOutlinedIcon,
-} from '@mui/icons-material';
+import {FavoriteOutlined as FavoriteOutlinedIcon,} from '@mui/icons-material';
 import {Box} from '@mui/material';
 
 
-export type HeartProps = {
-};
+export type HeartProps = {};
 
-const Heart: FC<HeartProps> = (props) => {
+const Heart: FC<HeartProps> = () => {
   return (
     <Box
       sx={{

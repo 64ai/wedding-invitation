@@ -13,7 +13,7 @@ const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
         position="relative"
         display="flex"
         justifyContent="center"
-        minHeight={400}
+        minHeight={800}
       >
         <Typography
           variant="h3"
@@ -28,7 +28,7 @@ const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
           We&apos;re Getting Married !
         </Typography>
         <Box>
-          <img src="/wedding-invitation/images/main.jpg" alt="main image" width="100%" height="100%" />
+          <img src="/wedding-invitation/images/main-min.jpeg" alt="main" width="100%" height="100%" />
         </Box>
       </Box>
     </article>

@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {Box, IconButton} from '@mui/material';
 import {
   FavoriteBorderOutlined as FavoriteBorderOutlinedIcon,
@@ -6,7 +6,6 @@ import {
 } from '@mui/icons-material';
 
 import type {FC} from 'react';
-import Heart from './Heart';
 
 export type ImageCardProps = {
   src?: string;
@@ -53,34 +52,10 @@ const saveLiked = (src?: string, shouldSave = false) => {
 const ImageCard: FC<ImageCardProps> = (props) => {
   const {src, x = 0, y = 0} = props;
   const [liked, setLiked] = useState(isLikeSaved(src));
-  const [showHeart, setShowHeart] = useState(false);
-
-  // useEffect(() => {
-  //   console.log(showHeart);
-  //   if (!showHeart) {
-  //     return;
-  //   }
-  //
-  //   // const timer = setTimeout(() => {
-  //   //   setShowHeart(false);
-  //   // }, 2000);
-  //   //
-  //   // return () => {
-  //   //   clearTimeout(timer);
-  //   // };
-  // }, [showHeart]);
 
   return (
     <Box
-      sx={{
-        paddingX: 1,
-        // '&:first-of-type':{
-        //   paddingLeft: 0,
-        // },
-        // '&:last-of-type':{
-        //   paddingRight: 0,
-        // }
-      }}
+      sx={{paddingX: 1}}
       position="relative"
     >
       <Box
@@ -93,7 +68,6 @@ const ImageCard: FC<ImageCardProps> = (props) => {
       >
         <IconButton
           onClick={() => {
-            // setShowHeart(true);
             setLiked(prev => {
               saveLiked(src, !prev);
               return !prev;
@@ -110,9 +84,6 @@ const ImageCard: FC<ImageCardProps> = (props) => {
             />
           )}
         </IconButton>
-        {showHeart && (
-          <Heart />
-        )}
       </Box>
       <Box
         sx={{

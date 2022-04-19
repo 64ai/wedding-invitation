@@ -9,7 +9,7 @@ export type DiagonalProps = {
 };
 
 const Diagonal: FC<DiagonalProps> = (props) => {
-  const {height, deg, backgroundColor, translateY} = props;
+  const {height, deg = 5, backgroundColor, translateY} = props;
 
   return (
     <>
@@ -19,7 +19,7 @@ const Diagonal: FC<DiagonalProps> = (props) => {
           position: 'absolute',
           height,
           backgroundColor,
-          transform: `translateY(${translateY}px) skewY(5deg)`,
+          transform: `translateY(${translateY}px) skewY(${deg}deg)`,
         }}
       />
     </>

@@ -1,7 +1,6 @@
 import {forwardRef} from 'react';
 import {Box, Button, Typography} from '@mui/material';
 import {STYLE} from '../../static';
-import {Accordion} from '../../components';
 
 export type NoticeProps = {};
 
@@ -83,18 +82,9 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
       </Box>
       <Box marginTop={10} textAlign="center" width="80%">
         <Typography variant="h2" gutterBottom>👫 </Typography>
-        {/*<Box display="flex" justifyContent="center">*/}
-        {/*  <Accordion />*/}
-        {/*</Box>*/}
         <div style={{textAlign: 'center'}}>황정혜 / 국민은행 115302-04-107751</div>
         <div style={{textAlign: 'center'}}>노승남 / 토스뱅크 1000-0034-9315</div>
       </Box>
-      {/*<Box sx={{position: 'absolute'}}>*/}
-      {/*  <img*/}
-      {/*    src="/wedding-invitation/images/sticky.png"*/}
-      {/*    width="100%"*/}
-      {/*  />*/}
-      {/*</Box>*/}
     </Box>
   );
 });

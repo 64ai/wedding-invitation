@@ -21,11 +21,7 @@ const Map: FC<MapProps> = (props) => {
       zoomOrigin: {lat, lng},
     };
 
-    var map = new naver.maps.Map('_map', mapOptions);
-    var marker = new naver.maps.Marker({
-      map,
-      position: map.getCenter(),
-    });
+    new naver.maps.Map('_map', mapOptions);
   }, []);
 
   return (

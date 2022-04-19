@@ -10,7 +10,6 @@ export type WarningProps = {
 
 const Warning: FC<WarningProps> = (props) => {
   const isLarger = useMediaQuery('(min-width:600px)');
-  console.log({isLarger});
   const [isOpen, setOpen] = useState<boolean>(true);
 
   const handleClick = () => {

@@ -44,7 +44,7 @@ const Notice = () => {
         flexDirection: 'column',
         alignItems: 'center',
         paddingBottom: '60px',
-        paddingTop: '30px',
+        paddingTop: '42px',
         backgroundColor: '#e5d2e0',
         height: 300,
       }}
@@ -87,6 +87,7 @@ const Notice = () => {
           <Box>
             <img
               src="/wedding-invitation/images/sticky_note.png"
+              alt="sticky note"
               width="390"
               style={{transform: 'translate(-60px, 35px)'}}
             />
