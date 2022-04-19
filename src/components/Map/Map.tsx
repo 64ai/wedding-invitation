@@ -5,9 +5,10 @@ import type {FC} from 'react';
 export type MapProps = {};
 
 const Map: FC<MapProps> = (props) => {
+  const lat = 35.1877130;
+  const lng = 129.2123966;
+
   useEffect(() => {
-    const lat = 35.1877130;
-    const lng = 129.2123966;
     const mapOptions = {
       center: new naver.maps.LatLng(lat, lng),
       zoom: 13,
@@ -39,10 +40,8 @@ const Map: FC<MapProps> = (props) => {
         isolation: 'isolate',
       }}
       onClick={() => {
-        const s = window.confirm('네이버 지도로  이동하시겠습니까?');
-        if (s) {
-          window.location.href = 'https://m.place.naver.com/restaurant/1646847275/home';
-        }
+        const addr = `nmap://place?lat=${lat}&lng=${lng}&name=대보름 오시리아 스퀘어&appname=https://kor-developer.github.io/wedding-invitation/`;
+        window.location.href = encodeURI(addr);
       }}
     >
       <div id="_map" style={{

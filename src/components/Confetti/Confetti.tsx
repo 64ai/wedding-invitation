@@ -26,7 +26,7 @@ const Confetti: FC<ConfettiProps> = (props) => {
 
   return (
     <Particles
-      height="300px"
+      height="440px"
       style={{position: 'absolute', top: -107, zIndex: 100}}
       container={container}
       init={particlesInit}

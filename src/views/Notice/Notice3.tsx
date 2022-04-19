@@ -16,6 +16,7 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
       ref={ref}
       sx={{
         display: 'flex',
+        position: 'relative',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
@@ -88,6 +89,12 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
         <div style={{textAlign: 'center'}}>황정혜 / 국민은행 115302-04-107751</div>
         <div style={{textAlign: 'center'}}>노승남 / 토스뱅크 1000-0034-9315</div>
       </Box>
+      {/*<Box sx={{position: 'absolute'}}>*/}
+      {/*  <img*/}
+      {/*    src="/wedding-invitation/images/sticky.png"*/}
+      {/*    width="100%"*/}
+      {/*  />*/}
+      {/*</Box>*/}
     </Box>
   );
 });
