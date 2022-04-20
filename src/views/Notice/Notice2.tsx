@@ -21,7 +21,7 @@ const Notice = () => {
 
   const text1 = 'SEE YOU SOON!';
   const text2 = 'NOTICE';
-  const text3 = `공간이 협소하여 
+  const text3 = `결혼식이 진행될 공간이 협소하여 
 정확한 인원 파악이 필요합니다
 밑에 버튼을 눌러 
 참석 유무를 알려주세요!
