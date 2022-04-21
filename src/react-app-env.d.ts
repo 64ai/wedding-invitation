@@ -55,6 +55,8 @@ declare module 'react-images-viewer' {
     spinnerSize?: number;
     /** Determines whether auto-scrolling is prevented (default: `true`) */
     preventAutoScroll?: boolean;
+    preventScroll?: boolean;
+    theme?: any;
   };
 
   export interface IImgObjects {

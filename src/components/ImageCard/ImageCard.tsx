@@ -4,8 +4,6 @@ import {
   FavoriteBorderOutlined as FavoriteBorderOutlinedIcon,
   FavoriteOutlined as FavoriteOutlinedIcon,
 } from '@mui/icons-material';
-// @ts-ignore
-import ImgsViewer from 'react-images-viewer';
 
 import type {FC} from 'react';
 import type {ImageType} from '../../types/global';
@@ -55,6 +53,8 @@ const ImageCard: FC<ImageCardProps> = (props) => {
   const [liked, setLiked] = useState(isLikeSaved(src));
 
   const handleImageClick = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
     onClick(true, index);
   }, [index, onClick]);
 
