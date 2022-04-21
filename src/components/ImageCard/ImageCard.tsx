@@ -14,8 +14,8 @@ export type ImageCardProps = {
   y: number;
 };
 
-const WIDTH = 300;
-const HEIGHT = 400;
+const WIDTH = 250;
+const HEIGHT = 300;
 
 const _parse = () => {
   const object = localStorage.getItem('hearts') || '{}';
