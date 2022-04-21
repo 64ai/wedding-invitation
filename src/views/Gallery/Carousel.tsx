@@ -39,7 +39,7 @@ export default function Carousel() {
       </Box>
       <ImgsViewer
         isOpen={imageState.open}
-        backdropCloseable
+        // backdropCloseable
         imgs={imageData}
         preventScroll
         currImg={imageState.currImgIndex}
