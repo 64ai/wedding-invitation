@@ -13,7 +13,7 @@ const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
         position="relative"
         display="flex"
         justifyContent="center"
-        minHeight={800}
+        minHeight={500}
       >
         <Typography
           variant="h3"

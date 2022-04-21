@@ -93,8 +93,8 @@ const Notice = () => {
             />
             <Box sx={{
               position: 'absolute',
-              top: 93,
-              left: 128,
+              top: 90,
+              left: 118,
               transform: 'rotate(-13.3deg)',
               textAlign: 'center',
             }}
@@ -112,7 +112,7 @@ const Notice = () => {
               <Typography
                 sx={{
                   whiteSpace: 'pre-line',
-                  fontSize: 12,
+                  fontSize: 13,
                 }}
               >
                 {text3}

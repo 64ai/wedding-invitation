@@ -1,9 +1,16 @@
-import {forwardRef} from 'react';
+import {useContext, useEffect} from 'react';
 import {Box, Typography} from '@mui/material';
 import {STYLE} from '../../static';
+import {Wave} from '../../components';
+import {useInView} from 'react-intersection-observer';
+import {GlobalContext} from '../../contexts/GlobalContext';
 
-const Notice = forwardRef<HTMLDivElement>((props, ref) => {
-  // TODO: https://fonts.google.com/specimen/Syncopate?preview.text=see%20you%20soon!&preview.text_type=custom
+const Notice = () => {
+  const {ref, inView} = useInView({
+    initialInView: false
+  });
+  const {color, changeColor} = useContext(GlobalContext);
+
   const text1 = `열심히 준비했지만
 둘 다 결혼이 처음이라
 부족한 부분도 있을 거예요
@@ -21,6 +28,18 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
   const text4 = `뜨겁게 만나요!
   
 `;
+
+  useEffect(() => {
+    if (color !== 'main' && color !== 'pink') {
+      return;
+    }
+    if (color === 'main' && inView) {
+      changeColor('pink');
+    } else if (color === 'pink' && !inView) {
+      changeColor('main');
+    }
+  }, [changeColor, color, inView]);
+
   return (
     <Box
       ref={ref}
@@ -35,17 +54,7 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
         minHeight: 400,
       }}
     >
-      <Box sx={{
-        content: '""',
-        bottom: '-5px',
-        display: 'block',
-        width: '138px',
-        height: '10px',
-        backgroundImage: 'url("data:image/svg+xml,<svg width=\'52\' height=\'10\' viewBox=\'0 0 52 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><path fill-rule=\'evenodd\' clip-rule=\'evenodd\' d=\'M26.3456 5.5155C19.8495 0.496856 10.2374 1.20194 0 6.47465V4.4622C10.5562 -0.974704 20.1801 -1.77683 27.5464 3.91414C30.8728 6.48396 34.3418 7.8579 38.203 7.97617C42.0826 8.09501 46.8952 7.09206 52 4.46288V6.47534C46.708 9.20097 42.4583 10.1199 38.1432 9.98771C33.8097 9.85497 29.9504 8.30049 26.3456 5.5155Z\' fill=\'%23faf6f9\'/></svg>")',
-        marginBottom: 5.5,
-      }}
-      >
-      </Box>
+      <Wave />
       <Typography
         sx={{
           width: '100%',
@@ -116,6 +125,6 @@ const Notice = forwardRef<HTMLDivElement>((props, ref) => {
       </Typography>
     </Box>
   );
-});
+};
 
 export default Notice;
