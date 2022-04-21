@@ -40,7 +40,7 @@ const Map: FC<MapProps> = (props) => {
         isolation: 'isolate',
       }}
       onClick={() => {
-        const addr = `nmap://place?lat=${lat}&lng=${lng}&name=대보름 오시리아 스퀘어&appname=https://kor-developer.github.io/wedding-invitation/`;
+        const addr = `nmap://place?lat=${lat}&lng=${lng}&name=대보름 오시리아 스퀘어&appname='https://seungnam-and-jonae.wedding'`;
         window.location.href = encodeURI(addr);
       }}
     >

@@ -4,5 +4,8 @@ export {default as Gallery} from './Gallery';
 export {default as Header} from './Header';
 export {default as Intro} from './Intro';
 export {default as Notice} from './Notice';
+export {Notice2} from './Notice';
+export {Notice3} from './Notice';
+export {default as Ribbon} from './Ribbon';
 export {default as Story} from './Story';
 export {default as Warning} from './Warning';

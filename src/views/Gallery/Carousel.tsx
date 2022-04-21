@@ -48,6 +48,9 @@ export default function Carousel() {
         onClose={(e) => {
           setImageState(prev => ({currImgIndex: 0, open: false}));
         }}
+        onClickImg={() => {
+          setImageState((prev) => ({...prev, open: false}));
+        }}
         // onClickThumbnail={(currImgIndex: number) => {
         //   setImageState(prev => ({...prev, currImgIndex}));
         // }}

@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useState} from 'react';
 import {Box, IconButton} from '@mui/material';
 import {
   FavoriteBorderOutlined as FavoriteBorderOutlinedIcon,
@@ -58,7 +58,6 @@ const ImageCard: FC<ImageCardProps> = (props) => {
     onClick(true, index);
   }, [index, onClick]);
 
-  // @ts-ignore
   return (
     <Box
       sx={{paddingX: 1}}

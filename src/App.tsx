@@ -6,14 +6,14 @@ import {
   Header,
   Intro,
   Notice,
+  Notice2,
+  Ribbon,
   Story,
   Warning,
 } from './views';
 import {MainLayout} from './layouts';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
-import {Box} from '@mui/material';
-import Notice2 from './views/Notice/Notice2';
 import {GlobalContext} from './contexts/GlobalContext';
 
 import type {HeaderColor} from './types/global';
@@ -38,6 +38,7 @@ const App = () => {
 
     console.log('%c안녕하세요.\n콘솔 창을 여셨네요...\n개발자 분이신가요? \n급히 만들어 흠이 많습니다...흑 \n분석 욕구는 잠시 접어두시고\n그냥 축하해주시면 %s', css, '감사하겠습니다ㅎㅎㅎㅎㅎ\n(_ _)');
   }, []);
+
   return (
     <GlobalContext.Provider value={{color, changeColor}}>
       <ThemeProvider theme={theme}>
@@ -47,17 +48,10 @@ const App = () => {
           <Intro />
           <Story />
           <Conversation />
-          <Box sx={{userSelect: 'none'}}>
-            <img
-              src="/wedding-invitation/images/confetti3.jpeg"
-              alt="confetti"
-              width="100%"
-            />
-          </Box>
+          <Ribbon />
           <Gallery />
           <Notice />
           <Notice2 />
-          {/*<Notice3 />*/}
           <Account />
         </MainLayout>
       </ThemeProvider>

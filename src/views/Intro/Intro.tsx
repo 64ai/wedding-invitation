@@ -28,7 +28,7 @@ const Intro = forwardRef<HTMLElement, IntroProps>((props, ref) => {
           We&apos;re Getting Married !
         </Typography>
         <Box>
-          <img src="/wedding-invitation/images/main-min.jpeg" alt="main" width="100%" height="100%" />
+          <img className="unclickable" src="/images/main-min.jpeg" alt="main" width="100%" height="100%" />
         </Box>
       </Box>
     </article>

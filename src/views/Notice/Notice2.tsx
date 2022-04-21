@@ -86,7 +86,7 @@ const Notice = () => {
         <Slide direction="right" in={showNote} timeout={2000}>
           <Box overflow="hidden">
             <img
-              src="/wedding-invitation/images/sticky_note.png"
+              src="/images/sticky_note.png"
               alt="sticky note"
               width="390"
               style={{transform: 'translate(-60px, 35px)'}}

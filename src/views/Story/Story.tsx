@@ -65,7 +65,8 @@ const Story = forwardRef<HTMLDivElement>((props, ref) => {
       </Box>
       <Box marginBottom={3.25} textAlign="center" width="100%">
         <img
-          src="/wedding-invitation/images/story_image.JPEG"
+          className="unclickable"
+          src="/images/story_image.JPEG"
           width="80%"
           alt="풋풋한 승남이와 정혜"
         />
