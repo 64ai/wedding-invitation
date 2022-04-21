@@ -121,7 +121,8 @@ const Notice = () => {
                 component="a"
                 variant="contained"
                 target="_blank"
-                href="https://forms.gle/mU7i9aLmGdsrC8gk6"
+                // href="https://forms.gle/mU7i9aLmGdsrC8gk6"
+                href="https://tally.so/r/nWxxLm"
                 sx={{
                   height: '25px',
                   paddingX: 1,
