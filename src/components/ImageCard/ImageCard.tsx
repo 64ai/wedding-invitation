@@ -1,18 +1,19 @@
-import {useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {Box, IconButton} from '@mui/material';
 import {
   FavoriteBorderOutlined as FavoriteBorderOutlinedIcon,
   FavoriteOutlined as FavoriteOutlinedIcon,
 } from '@mui/icons-material';
+// @ts-ignore
+import ImgsViewer from 'react-images-viewer';
 
 import type {FC} from 'react';
+import type {ImageType} from '../../types/global';
 
-export type ImageCardProps = {
-  src?: string;
-  alt?: string;
-  x: number;
-  y: number;
-};
+export interface ImageCardProps extends ImageType {
+  onClick: (open: boolean, index: number) => void;
+  isViewerOpen: boolean;
+}
 
 const WIDTH = 250;
 const HEIGHT = 300;
@@ -50,9 +51,14 @@ const saveLiked = (src?: string, shouldSave = false) => {
 };
 
 const ImageCard: FC<ImageCardProps> = (props) => {
-  const {src, x = 0, y = 0} = props;
+  const {onClick, isViewerOpen, index, src, x = 0, y = 0, alt} = props;
   const [liked, setLiked] = useState(isLikeSaved(src));
 
+  const handleImageClick = useCallback((e) => {
+    onClick(true, index);
+  }, [index, onClick]);
+
+  // @ts-ignore
   return (
     <Box
       sx={{paddingX: 1}}
@@ -86,6 +92,7 @@ const ImageCard: FC<ImageCardProps> = (props) => {
         </IconButton>
       </Box>
       <Box
+        onClick={handleImageClick}
         sx={{
           borderRadius: '24px',
           background: `url(${src})`,
