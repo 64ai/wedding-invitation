@@ -11,7 +11,7 @@ const Map: FC<MapProps> = (props) => {
   useEffect(() => {
     const mapOptions = {
       center: new naver.maps.LatLng(lat, lng),
-      zoom: 13,
+      zoom: 14,
       scaleControl: false,
       logoControl: false,
       mapDataControl: false,
@@ -40,7 +40,7 @@ const Map: FC<MapProps> = (props) => {
         isolation: 'isolate',
       }}
       onClick={() => {
-        const addr = `nmap://place?lat=${lat}&lng=${lng}&name=대보름 오시리아 스퀘어&appname='https://seungnam-and-jonae.wedding'`;
+        const addr = `nmap://place?lat=${lat}&lng=${lng}&name=오시리아 스퀘어&appname='https://seungnam-and-jonae.wedding'`;
         window.location.href = encodeURI(addr);
       }}
     >

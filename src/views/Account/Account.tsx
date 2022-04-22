@@ -1,5 +1,4 @@
 import {Box, Typography} from '@mui/material';
-import './Account.css';
 
 import type {FC} from 'react';
 

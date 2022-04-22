@@ -14,7 +14,7 @@ export interface ImageCardProps extends ImageType {
 }
 
 const WIDTH = 250;
-const HEIGHT = 300;
+const HEIGHT = 400;
 
 const _parse = () => {
   const object = localStorage.getItem('hearts') || '{}';
@@ -94,7 +94,7 @@ const ImageCard: FC<ImageCardProps> = (props) => {
         onClick={handleImageClick}
         sx={{
           borderRadius: '24px',
-          background: `url(${src})`,
+          background: `url(${src}) no-repeat`,
           backgroundPosition: `${x}px, ${y}px`,
           backgroundSize: 'cover',
           height: HEIGHT,

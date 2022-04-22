@@ -66,10 +66,18 @@ const Header: FC<HeaderProps> = (props) => {
           ...styles[color]
         }}
       >
-        <Box display="flex" alignItems="center">
+        <Box 
+          onClick={() => {
+            const shouldMove = window.confirm('네이버 지도로 이동하시겠습니까?');
+            if (shouldMove) {
+              window.location.href = 'http://naver.me/F0Ku8NvP';
+            }
+          }} 
+          display="flex" alignItems="center"
+        >
           <FmdGoodIcon />
           <Typography sx={TypographyStyle}>
-            기장 대보름 오시리아 스퀘어
+            기장 오시리아 스퀘어 1층
           </Typography>
         </Box>
         <Box display="flex" alignItems="center">

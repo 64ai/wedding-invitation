@@ -82,18 +82,18 @@ const Notice = () => {
         </Typography>
         {inView && <Confetti container={ref.current} />}
       </div>
-      <Box width="100%" ref={noteRef} sx={{position: 'absolute', bottom: 0}}>
+      <Box width="100%" ref={noteRef} sx={{position: 'absolute', bottom: -24}}>
         <Slide direction="right" in={showNote} timeout={2000}>
           <Box overflow="hidden">
             <img
               src="/images/sticky_note.png"
               alt="sticky note"
               width="390"
-              style={{transform: 'translate(-60px, 35px)'}}
+              style={{transform: 'translate(-60px, -4px)'}}
             />
             <Box sx={{
               position: 'absolute',
-              top: 90,
+              top: 52,
               left: 118,
               transform: 'rotate(-13.3deg)',
               textAlign: 'center',
