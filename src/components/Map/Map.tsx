@@ -40,8 +40,13 @@ const Map: FC<MapProps> = (props) => {
         isolation: 'isolate',
       }}
       onClick={() => {
-        const addr = `nmap://place?lat=${lat}&lng=${lng}&name=오시리아 스퀘어&appname='https://seungnam-and-jonae.wedding'`;
-        window.location.href = encodeURI(addr);
+        const shouldMove = window.confirm('네이버 지도로 이동하시겠습니까?');
+        if (shouldMove) {
+          window.location.href = 'http://naver.me/F0Ku8NvP';
+        }
+
+        // const addr = `nmap://place?lat=${lat}&lng=${lng}&name=오시리아 스퀘어&appname='https://seungnam-and-jonae.wedding'`;
+        // window.location.href = encodeURI(addr);
       }}
     >
       <div id="_map" style={{
