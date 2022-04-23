@@ -38,8 +38,22 @@ export default function Carousel() {
         ))}
       </Box>
       <ImgsViewer
+        closeBtnTitle="닫기"
+        enableKeyboardInput={false}
         isOpen={imageState.open}
-        // backdropCloseable
+        showImgCount={false}
+        theme={{
+          arrow: {
+            display: 'none',
+          },
+          container: {
+            padding: 20,
+            gutter: {
+              horizontal: 5,
+              vertical: 5,
+            }
+          },
+        }}
         imgs={imageData}
         preventScroll
         currImg={imageState.currImgIndex}
@@ -48,12 +62,6 @@ export default function Carousel() {
         onClose={(e) => {
           setImageState(prev => ({currImgIndex: 0, open: false}));
         }}
-        onClickImg={() => {
-          setImageState((prev) => ({...prev, open: false}));
-        }}
-        // onClickThumbnail={(currImgIndex: number) => {
-        //   setImageState(prev => ({...prev, currImgIndex}));
-        // }}
       />
     </Box>
   );
