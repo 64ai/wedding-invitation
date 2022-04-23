@@ -24,7 +24,7 @@ export default function Carousel() {
       <Box
         sx={{
           display: 'flex',
-          maxHeight: '400px',
+          // maxHeight: '400px',
           overflowX: 'scroll',
         }}
       >

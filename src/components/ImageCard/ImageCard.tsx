@@ -13,8 +13,8 @@ export interface ImageCardProps extends ImageType {
   isViewerOpen: boolean;
 }
 
-const WIDTH = 250;
-const HEIGHT = 400;
+const WIDTH = 330;
+const HEIGHT = 440;
 
 const _parse = () => {
   const object = localStorage.getItem('hearts') || '{}';
@@ -49,7 +49,7 @@ const saveLiked = (src?: string, shouldSave = false) => {
 };
 
 const ImageCard: FC<ImageCardProps> = (props) => {
-  const {onClick, isViewerOpen, index, src, x = 0, y = 0, alt} = props;
+  const {onClick, isViewerOpen, index, src, scale, x = 0, y = 0, alt} = props;
   const [liked, setLiked] = useState(isLikeSaved(src));
 
   const handleImageClick = useCallback((e) => {
@@ -90,17 +90,26 @@ const ImageCard: FC<ImageCardProps> = (props) => {
           )}
         </IconButton>
       </Box>
-      <Box
-        onClick={handleImageClick}
+      <Box 
         sx={{
+          overflow: 'hidden',
           borderRadius: '24px',
-          background: `url(${src}) no-repeat`,
-          backgroundPosition: `${x}px, ${y}px`,
-          backgroundSize: 'cover',
           height: HEIGHT,
           width: WIDTH,
         }}
-      />
+      >
+        <Box
+          onClick={handleImageClick}
+          sx={{
+            width: '100%',
+            height: '100%',
+            background: `url(${src}) no-repeat`,
+            backgroundPosition: `${x}px, ${y}px`,
+            backgroundSize: 'cover',
+            ...(scale) ? {transform: `scale(${scale})`} : {}
+          }}
+        />
+      </Box>
     </Box>
   );
 };

@@ -8,7 +8,7 @@ const Ribbon: FC<RibbonProps> = (props) => {
     <Box sx={{userSelect: 'none'}}>
       <img
         className="unclickable"
-        src="/images/confetti3.jpeg"
+        src="/images/confetti.jpeg"
         alt="confetti"
         width="100%"
       />

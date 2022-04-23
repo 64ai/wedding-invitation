@@ -22,7 +22,8 @@ export const imageData: ImageType[] = [
   {
     src: '/images/4_.jpg',
     alt: 'wedding 사진',
-    x: -4,
+    scale: 1.5,
+    x: 0,
     y: 10,
   },
   {
@@ -40,19 +41,19 @@ export const imageData: ImageType[] = [
   {
     src: '/images/7_.jpg',
     alt: 'wedding 사진',
-    x: -7,
+    x: 0,
     y: 10,
   },
   {
     src: '/images/8_.jpg',
     alt: 'wedding 사진',
-    x: -13,
+    x: 0,
     y: 10,
   },
   {
     src: '/images/9_.jpg',
     alt: 'wedding 사진',
-    x: -5,
+    x: 0,
     y: 10,
   }
 ].map((image, index) => ({...image, index}));
