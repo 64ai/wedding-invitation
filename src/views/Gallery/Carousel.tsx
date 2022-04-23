@@ -39,6 +39,7 @@ export default function Carousel() {
       </Box>
       <ImgsViewer
         closeBtnTitle="닫기"
+        preloadNextImg={false}
         enableKeyboardInput={false}
         isOpen={imageState.open}
         showImgCount={false}

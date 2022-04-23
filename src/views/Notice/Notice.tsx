@@ -12,8 +12,7 @@ const Notice = () => {
   const {color, changeColor} = useContext(GlobalContext);
 
   const text1 = `열심히 준비했지만
-둘 다 결혼이 처음이라
-부족한 부분도 있을 거예요
+부족한 부분이 있을 거예요
 그래도 사랑하는 친구들과 함께라면
 아주 멋진 결혼식이 될 것 같아요!
 `;

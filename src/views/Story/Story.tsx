@@ -66,7 +66,7 @@ const Story = forwardRef<HTMLDivElement>((props, ref) => {
       <Box marginBottom={3.25} textAlign="center" width="100%">
         <img
           className="unclickable"
-          src="/images/story_image.JPEG"
+          src="/images/story_image-min.JPEG"
           width="80%"
           alt="풋풋한 승남이와 정혜"
         />

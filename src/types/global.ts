@@ -6,4 +6,6 @@ export interface ImageType {
   scale?: number;
   x: number;
   y: number;
+  translateX?: number;
+  translateY?: number;
 }

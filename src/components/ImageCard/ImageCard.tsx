@@ -49,7 +49,7 @@ const saveLiked = (src?: string, shouldSave = false) => {
 };
 
 const ImageCard: FC<ImageCardProps> = (props) => {
-  const {onClick, isViewerOpen, index, src, scale, x = 0, y = 0, alt} = props;
+  const {onClick, isViewerOpen, index, src, scale, x = 0, y = 0, translateX = 0, translateY = 0, alt} = props;
   const [liked, setLiked] = useState(isLikeSaved(src));
 
   const handleImageClick = useCallback((e) => {
@@ -90,7 +90,7 @@ const ImageCard: FC<ImageCardProps> = (props) => {
           )}
         </IconButton>
       </Box>
-      <Box 
+      <Box
         sx={{
           overflow: 'hidden',
           borderRadius: '24px',
@@ -106,7 +106,7 @@ const ImageCard: FC<ImageCardProps> = (props) => {
             background: `url(${src}) no-repeat`,
             backgroundPosition: `${x}px, ${y}px`,
             backgroundSize: 'cover',
-            ...(scale) ? {transform: `scale(${scale})`} : {}
+            ...(scale) ? {transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`} : {}
           }}
         />
       </Box>
