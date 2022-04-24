@@ -69,6 +69,7 @@ const ImageCard: FC<ImageCardProps> = (props) => {
           position: 'absolute',
           top: 8,
           right: 16,
+          zIndex: 10,
         }}
       >
         <IconButton
